@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Model class for drumkits (you will not need to edit this file, but it will help to read through it) 
+/// Model class for drumkits (you will not need to edit this file, but it will help to read through it)
 class DrumKit {
     
     /// The ID number to indicate which drum kit the user is playing
@@ -24,19 +24,19 @@ class DrumKit {
     init(drumKitID: Int) {
         self.drumKitID = drumKitID
     }
-
+    
     /// Plays the audio file for drum associated with the given tag
     ///
     /// - Parameter tag: The tag of the drum button pressed
     func playDrumSound(forDrumWithTag tag: Int) {
         switch drumKitID {
-            case 0:
-                SystemSoundID.playSound(withFilename: DrumKit.drumKit0AudioFileNames[tag])
-            case 1:
-                SystemSoundID.playSound(withFilename: DrumKit.drumKit1AudioFileNames[tag])
-            default:
-                print("Error - drum kit \(drumKitID) does not exist.")
-            }
+        case 0:
+            SystemSoundID.playSound(withFilename: DrumKit.drumKit0AudioFileNames[tag])
+        case 1:
+            SystemSoundID.playSound(withFilename: DrumKit.drumKit1AudioFileNames[tag])
+        default:
+            print("Error - drum kit \(drumKitID) does not exist.")
+        }
     }
 }
 
@@ -53,4 +53,3 @@ extension SystemSoundID {
         }
     }
 }
-
